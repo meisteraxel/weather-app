@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./style.css";
 
 function App() {
-  const [city, setCity] = useState("");
+  const [city, setCity] = useState("Berlin");
   const [weather, setWeather] = useState(null);
   const [location, setLocation] = useState("");
 
