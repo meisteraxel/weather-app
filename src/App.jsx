@@ -54,7 +54,6 @@ function App() {
     <main>
       <div className="app-container">
         <h1>Weather App</h1>
-        <p>This is a simple weather app using the OpenWeather API.</p>
         <input
           type="text"
           placeholder="Berlin"
@@ -62,20 +61,28 @@ function App() {
           onKeyDown={keyPress}
         />
         <button onClick={handleSearch}>Search</button>
-        <h2>{location.name}</h2>
-        <h2>{location.country}</h2>
-        <h2>{location.state}</h2>
-        <p>Temperature: {weather && weather.current.temp}°C</p>
-        <p>Feels like: {weather && weather.current.feels_like}°C</p>
-        <p>Humidity: {weather && weather.current.humidity}%</p>
-        <p>{weather && weather.current.weather[0].description}</p>
-        <img
-          src={
-            weather &&
-            `http://openweathermap.org/img/wn/${weather.current.weather[0].icon}.png`
-          }
-          alt=""
-        />
+        <div className="location-container">
+          <h2>{location.name}</h2>
+          <h2>
+            {location.country}, {location.state}
+          </h2>
+        </div>
+        <div className="data-container">
+          <div>
+            <p>Temperature: {weather && weather.current.temp}°C</p>
+            <p>Feels like: {weather && weather.current.feels_like}°C</p>
+            <p>Humidity: {weather && weather.current.humidity}%</p>
+            <p>{weather && weather.current.weather[0].description}</p>
+          </div>
+
+          <img
+            src={
+              weather &&
+              `http://openweathermap.org/img/wn/${weather.current.weather[0].icon}.png`
+            }
+            alt=""
+          />
+        </div>
       </div>
     </main>
   );
