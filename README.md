@@ -1,12 +1,12 @@
 # Weather App
 
-This app provides current weather information using the OpenWeatherMap API and geocoding API. Users can enter a location to view the current weather conditions.
+This app provides current weather information using the OpenWeatherMap API and geocoding API. <br/>Users can enter a location to view the current weather conditions.
 
 ![Weather App Screenshot](./src/assets/screenshot.PNG)
 
 ## Live Site
 
-Check out the live site [here](<insert live site link>).
+Check out the live site [here](https://weather-app-axmst.netlify.app/).
 
 ## Built With
 
