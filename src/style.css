@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 :root {
-  --50: #effaf4;
-  --100: #d9f2e3;
-  --200: #b6e4cb;
-  --300: #87ceab;
-  --400: #54b387;
-  --500: #32976b;
-  --600: #237856;
-  --700: #1c6047;
-  --950: #0e2f24;
+  --50: #fef2f2;
+  --100: #fee2e2;
+  --200: #fdcbcb;
+  --300: #fba6a6;
+  --400: #f67373;
+  --500: #ed4646;
+  --600: #da2828;
+  --700: #b71e1e;
+  --950: #7e1e1e;
 }
 
 * {
@@ -23,8 +23,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(130deg, var(--600), var(--950));
-  font-family: Roboto, sans-serif;
+  background: linear-gradient(130deg, var(--400), var(--950));
+  font-family: "Roboto", sans-serif;
 }
 
 main {
@@ -32,4 +32,32 @@ main {
   background-color: var(--50);
   padding: 40px;
   border-radius: 20px;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.app-container input {
+  text-align: center;
+  width: 250px;
+  padding: 5px 0px;
+  border: 1px solid var(--950);
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+}
+
+.app-container button {
+  font-family: "Roboto", sans-serif;
+  padding: 5px 0px;
+  width: 200px;
+  background-color: var(--50);
+  border: 1px solid var(--950);
+  border-radius: 5px;
+  cursor: pointer;
 }
