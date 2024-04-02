@@ -15,7 +15,7 @@ function App() {
     if (city) {
       const fetchWeather = async () => {
         try {
-          const geocodingUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=${limit}&appid=${APIkey}`;
+          const geocodingUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=${limit}&appid=${APIkey}`;
           const geocodingResponse = await fetch(geocodingUrl);
           if (!geocodingResponse.ok) {
             throw new Error("Failed to fetch location");
@@ -59,7 +59,7 @@ function App() {
         <img
           src={
             weather &&
-            `http://openweathermap.org/img/wn/${weather.current.weather[0].icon}.png`
+            `https://openweathermap.org/img/wn/${weather.current.weather[0].icon}.png`
           }
           alt=""
         />
