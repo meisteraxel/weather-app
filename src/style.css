@@ -39,16 +39,19 @@ main {
   text-align: center;
   width: 250px;
   padding: 5px 0px;
-  border: 1px solid black;
+  border: 1px solid white;
   border-radius: 5px;
+  color: white;
   font-family: "Roboto", sans-serif;
+  background: transparent;
 }
 
 .app-container button {
   font-family: "Roboto", sans-serif;
   padding: 5px 0px;
   width: 200px;
-  background-color: white;
+  color: white;
+  background-color: transparent;
   border: 1px solid black;
   border-radius: 5px;
   cursor: pointer;
