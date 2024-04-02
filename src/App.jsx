@@ -35,6 +35,8 @@ function App() {
         } catch (error) {
           console.error("Error fetching weather data", error);
         }
+
+        document.getElementById("city").value = "";
       };
       fetchWeather();
     }
@@ -53,36 +55,22 @@ function App() {
   return (
     <main>
       <div className="app-container">
-        <h1>Weather App</h1>
+        <h2>{location.name}</h2>
+        <img
+          src={
+            weather &&
+            `http://openweathermap.org/img/wn/${weather.current.weather[0].icon}.png`
+          }
+          alt=""
+        />
+        <p>{weather && weather.current.weather[0].description}</p>
+        <p>{weather && weather.current.temp}°C</p>
         <input
           type="text"
-          placeholder="Berlin"
+          placeholder="Search for city..."
           id="city"
           onKeyDown={keyPress}
         />
-        <button onClick={handleSearch}>Search</button>
-        <div className="location-container">
-          <h2>{location.name}</h2>
-          <h2>
-            {location.country}, {location.state}
-          </h2>
-        </div>
-        <div className="data-container">
-          <div>
-            <p>Temperature: {weather && weather.current.temp}°C</p>
-            <p>Feels like: {weather && weather.current.feels_like}°C</p>
-            <p>Humidity: {weather && weather.current.humidity}%</p>
-            <p>{weather && weather.current.weather[0].description}</p>
-          </div>
-
-          <img
-            src={
-              weather &&
-              `http://openweathermap.org/img/wn/${weather.current.weather[0].icon}.png`
-            }
-            alt=""
-          />
-        </div>
       </div>
     </main>
   );

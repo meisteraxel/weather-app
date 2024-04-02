@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
 * {
   box-sizing: border-box;
@@ -11,7 +11,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Roboto", sans-serif;
+  font-family: "DM Sans", sans-serif;
   background-image: url(./assets/background-sky.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -20,11 +20,11 @@ body {
 main {
   padding: 40px;
   color: white;
-  background: rgba(10, 10, 10, 0.8);
+  background: rgba(18, 18, 18, 0.88);
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(15.2px);
-  -webkit-backdrop-filter: blur(15.2px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.7px);
+  -webkit-backdrop-filter: blur(3.7px);
 }
 
 .app-container {
@@ -34,46 +34,23 @@ main {
   align-items: center;
   justify-content: center;
   text-align: center;
+  transition: all 0.2s ease-in-out;
 }
 
 .app-container input {
   text-align: center;
   width: 250px;
   padding: 5px 0px;
-  border: 1px solid white;
+  border: none;
   border-radius: 5px;
   color: white;
   font-family: "Roboto", sans-serif;
-  background: transparent;
+  background: rgba(18, 18, 18, 0.9);
+  margin-top: 20px;
+  font-family: "DM Sans", sans-serif;
 }
 
-.app-container button {
-  font-family: "Roboto", sans-serif;
-  padding: 5px 0px;
-  width: 200px;
-  color: white;
-  background-color: transparent;
-  border: 1px solid black;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.location-container {
-  display: flex;
-  gap: 10px;
-}
-
-.data-container {
-  display: flex;
-  text-align: left;
-  gap: 10px;
-}
-
-.data-container p {
-  margin-top: 2px;
-}
-
-.data-container img {
+.app-container img {
   width: 60px;
   height: 60px;
 }
