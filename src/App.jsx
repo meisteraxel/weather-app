@@ -21,8 +21,7 @@ function App() {
             throw new Error("Failed to fetch location");
           }
           const locationData = await geocodingResponse.json();
-          const location = locationData[0];
-          setLocation(location);
+          setLocation(locationData[0]);
 
           const weatherUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${locationData[0].lat}&lon=${locationData[0].lon}&units=${units}&exclude=${part}&appid=${APIkey}`;
           const weatherResponse = await fetch(weatherUrl);
