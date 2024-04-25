@@ -51,26 +51,30 @@ function App() {
     setCity(document.getElementById("city").value);
   };
 
-  const temperature = weather.current.temp;
-  const description = weather.current.weather[0].description;
-  const icon = weather.current.weather[0].icon;
-
   return (
     <main>
       <div className="app-container">
-        <h2>{location.name}</h2>
-        <img
-          src={weather && `https://openweathermap.org/img/wn/${icon}.png`}
-          alt=""
-        />
-        <p>{weather && description}</p>
-        <p>{weather && temperature}°C</p>
         <input
           type="text"
           placeholder="Search for city..."
           id="city"
           onKeyDown={keyPress}
         />
+        {location && (
+          <>
+            <h2>{location.name}</h2>
+            {weather && weather.current && (
+              <>
+                <img
+                  src={`https://openweathermap.org/img/wn/${weather.current.weather[0].icon}.png`}
+                  alt=""
+                />
+                <p>{weather.current.weather[0].description}</p>
+                <p>{weather.current.temp}°C</p>
+              </>
+            )}
+          </>
+        )}
       </div>
     </main>
   );
